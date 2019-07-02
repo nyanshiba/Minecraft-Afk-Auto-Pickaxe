@@ -21,7 +21,7 @@ if ($hwnd.Count -eq 0)
 {
     $ProcessId = Read-Host "Type Id"
     $hwnd = Get-Process javaw | Where-Object {$_.Id -eq $ProcessId} | Select-Object Index,Id,Name,MainWindowTitle,MainWindowHandle
-    if ($hwnd.Connt -eq 0)
+    if ($hwnd.Count -eq 0)
     {
         Write-Error "Error: No such process."
         return
