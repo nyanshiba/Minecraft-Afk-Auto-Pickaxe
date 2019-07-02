@@ -1,4 +1,4 @@
-#190702
+#190703
 
 Write-Host "using .NET Class"
 Add-Type @"
@@ -13,7 +13,7 @@ public static extern IntPtr PostMessage(int hWnd, UInt32 Msg, int wParam, int lP
 $hwnd = Get-Process javaw | Where-Object {$_.MainWindowTitle -match "Minecraft"} | Select-Object Index,Id,Name,MainWindowTitle,MainWindowHandle
 $hwnd
 
-if ($hwnd.Connt -eq 0)
+if ($hwnd.Count -eq 0)
 {
     Write-Error "Error: Minecraft Process not found."
     return
