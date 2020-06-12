@@ -38,7 +38,23 @@ Get-ExecutionPolicy
 Set-ExecutionPolicy RemoteSigned
 ```
 
-5. スクリプトを実行する。  
+5. スクリプトをテキストエディタで開き、設定を用途に合わせて変更する  
+下記は畑植え放置の例
+
+```powershell
+#ユーザ設定
+$Settings =
+@{
+    #右押下
+    RightButtonDown = $True
+    #左押下
+    LeftButtonDown = $False
+    #ウィンドウを小さくするか
+    SmallWindow = $False
+}
+```
+
+6. スクリプトを実行する。  
 
 ```powershell
 #実行
@@ -48,8 +64,17 @@ Set-ExecutionPolicy RemoteSigned
 powershell .\AutoPickaxe.ps1
 ```
 
-6. 10秒以内にMinecraftの画面をアクティブにして、十字を合わせる。  
+7. 10秒以内にMinecraftの画面をアクティブにして、十字を合わせる。  
 
-7. PowerShellのコンソールに戻り、`Enter`キーでスクリプトを終了する。  
+```
+Starting after 10 sec...
+Alt-Tab -> Minecraft, Press 'Esc'.
+```
 
-8. `exit`でPowerShellを終了する。  
+8. PowerShellのコンソールに戻り、`Enter`キーでスクリプトを終了する。  
+
+```
+Processing...[Enter: Stop]:
+```
+
+9. `exit`でPowerShellを終了する。  
